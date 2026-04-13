@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #5555;
+      width: 100%;
+      height: 100vh;
+    }
+    .container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #loginForm {
+      border-radius: 10px;
+      background-color: #ffffff;
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      justify-content: center;
+      align-items: center;
+    }
+    .inputArea {
+      display: flex;
+      flex-direction: column;
+    }
+    .inputArea label {
+      font-size: 16px;
+      letter-spacing: 0.5;
+      margin-bottom: 5px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .input {
+      width: 400px;
+      border-radius: 8px;
+      padding: 6px;
+      display: flex;
+      gap: 10px;
+      flex-direction: row;
+      background-color: #fff;
+      border: 1px solid black;
+    }
+    .input input {
+      border: none;
+      outline: none;
+      width: 100%;
+    }
+    .logo {
+      padding-bottom: 20px;
+    }
+    .input img {
+      color: #5555;
+    }
+    .input input::placeholder {
+      color: #707070;
+    }
+
+     .inputArea span{
+        color: #ff0000;
+    }
+
+    #button {
+      width: 400px;
+      padding: 15px 20px;
+      background-color: #050c9c;
+      color: #fff;
+      font-size: 14px;
+      border-radius: 8px;
+      margin-top: 20px;
+      border: 2px solid #050c9c;
+    }
+    #button:hover {
+      cursor: pointer;
+    }
+
+    .footer a {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+    }
+    .btn1 {
+      width: 400px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 12px 12px;
+      background-color: #ff0000;
+      border: 2px solid #ff0000;
+      border-radius: 12px;
+      margin-bottom: 10px;
+    }
+    .btn2 {
+      width: 400px;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 12px 12px;
+      background-color: #0c68c4;
+      border: 2px solid #0c68c4;
+    }
+    .btn1 p {
+      font-size: 14px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #fff;
+      padding: 8px 12px;
+    }
+    .btn2 p {
+      font-size: 14px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #fff;
+      padding: 8px 12px;
+    }
+    .btn1 img {
+      border: 1px solid #ff0000;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .btn2 img {
+      border: 1px solid #0c68c4;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .btn1:hover {
+      cursor: pointer;
+    }
+    .btn2:hover {
+      cursor: pointer;
+    }
+
+    .bottomText a {
+      text-decoration: none;
+      color: #000;
+    }
+    .bottomText a:hover {
+      color: #050c9c;
+      
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div id="loginForm">
+        <div class="logo"><img src="logo (1).png" alt="" /></div>
+
+        <div class="inputArea">
+          <label for="">Username<span>*</span></label>
+          <div class="input">
+            <img src="email.png" alt="" height="30px" width="30px" />
+            <input
+              type="text"
+              id="username"
+              placeholder="Enter Username"
+            />
+          </div>
+          <p id="email"></p>
+        </div>
+
+        <div class="inputArea">
+          <label for="">Password<span>*</span></label>
+          <div class="input">
+            <img
+              src="password.jpg"
+              alt=""
+              height="30px"
+              width="30px"
+            />
+
+            <input type="password" id="password" placeholder="Enter Password"/>
+
+            <img
+              src="eye-icon.jpg"
+              alt="togglePassword"
+              width="30px"
+              height="30px"
+              onclick="togglePassword()"
+              id="myImage"
+            />
+          </div>
+          <p id="para"></p>
+        </div>
+
+        <button id="button" onclick="logIn()">SIGN IN</button>
+
+        <div class="bottomText">
+          <p>Create an account?<a href="/signup.html">Sign up</a></p>
+        </div>
+
+        <div class="or-divider">
+          <span>OR</span>
+        </div>
+
+        <div class="footer">
+          <a
+            href="https://accounts.google.com/v3/signin/accountchooser?continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F%3Ftab%3Drm%26ogbl&dsh=S-401540884%3A1769061629505367&emr=1&followup=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F%3Ftab%3Drm%26ogbl&ifkv=AXbMIuCYqBvyaxFuZ3k3r3ZKvx2COJDe2oF3c_OultrEoabVjIXG_g9620P05dokOeFfR6TUDdsihw&osid=1&passive=1209600&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin "
+            target="_blank"
+          >
+            <button class="btn1">
+              <img src="google.webp" alt="" height="36px" width="36px" />
+              <p>SignIn with Google</p>
+            </button></a
+          >
+          <a
+            href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQFhfkSPKbMitwAAAZvkRqo4GEW6KxMwTuRF-13pWh7bS_Zzk_DdwLRlzSz4WUJz4BuAz-OY0EkMABMbGuuuuw-HdIv7bJIDINnhquk7AmX6WW1kxV_89_aN0w6WlPxIDiLy-Qg=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2F104871558%2Fadmin%2Fpage-posts%2Fpublished%2F"
+            target="_blank"
+          >
+            <button class="btn2">
+              <img src="linkedin.avif" alt="" height="36px" width="36px" />
+              <p>SignIn with LinkedIn</p>
+            </button></a
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+   function logIn() {
+  let username = document.getElementById("username").value;
+  let password = document.getElementById("password").value;
+  let email = document.getElementById("email");
+  let para = document.getElementById("para");
+
+  email.innerText = "";
+  para.innerText = "";
+
+  let passwordLength = 7;
+  let passwordRegex =
+    /^(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]).{7,}$/;
+
+  if(username === ""){
+        email.innerText = "Enter Username";
+        email.style.color = "red";
+    }
+     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(username)){
+        email.innerText = "Enter Valid Email Address";
+          email.style.color = "red";    
+    }
+
+    if (password === "") {
+    para.innerText = "Enter password";
+    para.style.color = "red";
+    return;
+  }
+  if (password.length < passwordLength) {
+    para.innerText = "Password must be at least 7 characters";
+    para.style.color = "red";
+    return;
+  }
+
+  if (!passwordRegex.test(password)) {
+    para.innerText = "Password must contain a special character";
+    para.style.color = "red";
+    return;
+  }
+
+  if (username === "shubham@buzytech.com" && password === "Shubham@123") {
+    // localStorage.setItem("username", username);
+    // localStorage.setItem("password", password);
+    window.location.href = "dashboard/dashboard.html";
+  } else {
+    email.innerText = "Invalid username";
+    para.innerText = "Invalid password";
+    email.style.color = para.style.color = "red";
+  }
+}
+
+function togglePassword() { 
+  let myImage = document.getElementById("myImage"); 
+  let password = document.getElementById("password"); 
+  if (password.type === "password") { 
+    password.type = "text"; 
+    myImage.src = "eye-hidden-icon.png"; 
+  } else { 
+    password.type = "password"; 
+    myImage.src = "eye-icon.jpg"; 
+  } 
+}
+
+
+
+  </script>
+</html>
