@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+     <link rel="stylesheet" href="dashboard.css"/>
+  </head>
+
+
+  <body>
+    <nav class="topnav">
+      <div class="leftcol">
+        <div class="logo">
+          <img src="icon.png" alt="" height="34px" width="34px" />
+          <p><span>Kivi</span>Care</p>
+        </div>
+        <div class="inputarea">
+            <img src="search.png" alt="" height="20px" width="20px">
+          <input type="search" name="" id="" placeholder="Search here ...."/>
+        </div>
+      </div>
+
+      <div class="rightcol">
+           
+        <div class="logo2">
+            <div class="image">
+            <img src="bell.png" alt="" height="24px" width="24px">
+            </div>
+            <span>EN </span>
+            <img src="globe-icon.jpg" alt="" height="24px" width="24px">
+        </div>
+     
+        <div class="text">
+           <p>Ms.Ivan Norris</p>
+        </div>
+         
+      </div>
+    </nav>
+
+    <div class="container">
+
+        <div class="aside">
+           <div class="head">
+                 <h1>Good Evening Ms.Ivan Norris</h1>
+                 <p>Last update, 11 Nov 2025</p>
+           </div>
+
+           <div class="list">
+               <div class="listItem">
+              <img src="icons8-grid-32.png" alt="" height="28px" width="28px">
+            
+              <a href="" class="Dashboard" style="color: #fa878d;">Dashboard</a>
+              </div>
+              
+               <div class="listItem">
+              <img src="appointment.png" alt="" height="28px" width="28px">
+              <a href="">Appointment List</a>
+              </div>
+
+              <div class="listItem">
+              <img src="report.jpg" alt="" height="28px" width="28px">
+              <a href="">Reports</a>
+              </div>
+
+               <div class="listItem">
+              <img src="profile-icon.jpg" alt="" height="28px" width="28px">
+              <a href="">My Profile</a>
+              </div>
+
+               <div class="listItem">
+              <img src="success.png" alt="" height="28px" width="28px">
+              <a href="">Clinic Overview</a>
+              </div>
+           </div>
+
+           <div class="listIcon">
+              <img src="settings.jpg" alt="" height="38px" width="38px">
+               <img src="virus.png" alt="" height="42px" width="42px">
+               <img src="star.webp" alt="" height="28px" width="28px">
+           </div>
+
+        </div>
+
+        <div class="beside">
+            <div class="Home">
+               <a href="">Home </a>
+               <img src="right.png" alt="" height="18px" width="18px">
+               <h2>My Profile</h2>
+            </div>
+
+            <div class="title">My Account</div>
+
+
+            <div class="account">
+            <div class="info-item">
+               <div class="info" style="background-color: #fa878d;  border-radius: 50px; color: #fff;">
+                <img src="icons8-profile-24 (1).png" alt="" height="28px" width="28px">
+                <p>Personal Information</p>
+               </div>
+                 <div class="info">
+                <img src="performance.png" alt="" height="28px" width="28px">
+                <p>Integration Preferences</p>
+               </div>
+                 <div class="info">
+                <img src="notification.png" alt="" height="28px" width="28px">
+                <p>Notification Settings</p>
+               </div>
+                 <div class="info">
+                <img src="padlock.png" alt="" height="28px" width="28px">
+                <p>Security Settings</p>
+               </div>
+            </div>
+             
+
+            <div class="account-info">
+                <div class="header">Personal Information</div> 
+
+                <div class="subhead">
+                   <img src="doctor (1).png" alt="" height="116px" width="116px" id="image">
+                       <input type="file" id="fileInput" accept="image/*" hidden>
+
+                   <button >Upload</button>
+                   <button onclick="removeImage()">Remove</button>
+                </div>
+           
+          <form class="form" onsubmit="submitUser(event)">
+            <div class="inputArea">
+              <div class="input">
+                <label for="">First Name<span>*</span></label>
+                <input type="text" name="" id="showFirst" placeholder="First name">
+              </div>
+              <div class="input">
+                   <label for="">Last Name</label>
+                <input type="text" name="" id="showLast" placeholder="Last name">
+              </div>
+            </div>
+
+             <div class="inputArea">
+              <div class="input">
+                <label for="">Email<span>*</span></label>
+                <input type="text" name="" id="showEmail" placeholder="Enter Email">
+              </div>
+              <div class="input">
+                   <label for="">Username<span>*</span></label>
+                <input type="text" name="" id="showUser" placeholder="Enter Username">
+              </div>
+            </div>
+
+             <div class="inputArea">
+              <div class="input">
+                <label for="">Country<span>*</span></label>
+                  <select id="country" >
+                <option value="INDIA">INDIA</option>
+                <option value="UAE">UAE</option>
+                <option value="USA">USA</option>
+                <option value="UK">UK</option>
+                 <option value="ZIMBABWE">ZIMBABWE</option>
+             </select>
+              </div>
+              <div class="input">
+                   <label for="">Contact<span>*</span></label>
+                <input type="text" name="" id="showContact" placeholder="Contact number">
+              </div>
+            </div>
+            <!-- <div class="inputArea">
+              <div class="input-address">
+                <label for="">Address<span>*</span></label>
+                <input type="text" name="" id="address" placeholder="Address">
+              </div>
+            </div> -->
+
+            <div class="gender-group">
+               <p class="label">Gender<span>*</span></p>
+
+               <label class="gender-option">
+                 <input type="radio" name="gender" value="Male" />
+                  <span class="custom-radio"></span>
+                     Male
+                </label>
+
+                <label class="gender-option">
+                  <input type="radio" name="gender" value="Female"/>
+                    <span class="custom-radio"></span>
+                     Female
+                </label>
+
+                <label class="gender-option">
+                  <input type="radio" name="gender" value="Intersex"/>
+                    <span class="custom-radio"></span>
+                       Intersex
+                </label>
+              </div>
+             <div class="inputPass">
+              <p>Change Password</p>
+              <div class="inputArea">
+              <div class="input">
+                <label for="">New Password<span>*</span></label>
+                <div class="inputIcon">
+                <input type="password" name="" id="showPass" placeholder="">
+                  <img src="eye-icon.jpg" alt="togglePassword"   height="32px" onclick="toggleIcon()"  id="myImage" >
+                  </div>
+              </div>
+              <div class="input">
+                   <label for="">Confirm Password<span>*</span></label>
+                   <div class="inputIcon">
+                <input type="password" name="" id="showConfirmPass" placeholder="">
+                  <img src="eye-icon.jpg" alt="togglePassword"   height="32px" onclick="togglePassword()"  id="eyeIcon" >
+                  </div>
+              </div>
+              </div>
+            </div>
+              <div class="box">
+             <label class="checkbox-label">
+                 <input type="checkbox" id="check">
+                  <span class="custom-checkbox"></span>
+                  I agree to the Terms, Privacy and Fees
+                 </label>
+                 <p id = "text"></p>
+           </div>
+
+           <div class="button">
+             <button type="submit">Submit</button>
+             <button type="reset" onclick="deleteUser()">Cancel</button>
+           </div>
+          </form>
+           </div>
+          </div>
+     
+    </div>
+  </body>
+
+  <script src="dashboard.js"></script>
+</html>
